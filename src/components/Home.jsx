@@ -1,5 +1,6 @@
 import profile from "../assets/images/profile-pic.JPG";
 import { useEffect, useRef } from "react";
+import Tilt from "./Tilt";
 
 function Home() {
   const typingRef = useRef(null);
@@ -8,24 +9,35 @@ function Home() {
     const el = typingRef.current;
     if (!el) return;
 
-    const text = "Frontend Developer";
-    let index = 0;
+    const words = [
+      "Frontend Developer",
+      "React Developer",
+      "Full Stack Developer"
+    ];
+    let wordIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
     let timeoutId;
 
-    el.textContent = "";
-
     const type = () => {
-      if (index < text.length) {
-        el.textContent += text[index];
-        index++;
-        timeoutId = setTimeout(type, 120);
+      const currentWord = words[wordIdx];
+      if (!isDeleting) {
+        el.textContent = currentWord.substring(0, charIdx++);
+        if (charIdx > currentWord.length) {
+          isDeleting = true;
+          timeoutId = setTimeout(type, 1800); // Wait at full word
+          return;
+        }
       } else {
-        timeoutId = setTimeout(() => {
-          el.textContent = "";
-          index = 0;
-          type();
-        }, 400);
+        el.textContent = currentWord.substring(0, charIdx--);
+        if (charIdx < 0) {
+          isDeleting = false;
+          wordIdx = (wordIdx + 1) % words.length;
+          timeoutId = setTimeout(type, 300); // Wait before next word
+          return;
+        }
       }
+      timeoutId = setTimeout(type, isDeleting ? 60 : 100);
     };
 
     type();
@@ -53,43 +65,46 @@ function Home() {
           </p>
 
           <div className="social-links">
-              <a
-                href="https://github.com/your-github-username"
-                target="_blank"
-                rel="noreferrer"
-                className="social-btns"
-                aria-label="GitHub"
-              >
+            <a
+              href="https://github.com/vrushabh-digraje"
+              target="_blank"
+              rel="noreferrer"
+              className="social-btns"
+              aria-label="GitHub"
+            >
               <i className="bx bxl-github"></i>
-              </a>
+            </a>
 
-              <a
-                href="https://www.linkedin.com/in/your-linkedin-id/"
-                target="_blank"
-                rel="noreferrer"
-                className="social-btns"
-                aria-label="LinkedIn"
-              >
+            <a
+              href="https://www.linkedin.com/in/vrushabh-digraje-408566260/"
+              target="_blank"
+              rel="noreferrer"
+              className="social-btns"
+              aria-label="LinkedIn"
+            >
               <i className="bx bxl-linkedin"></i>
-              </a>
+            </a>
 
-              <a
-                href="https://wa.me/919767747360"
-                target="_blank"
-                rel="noreferrer"
-                className="social-btns"
-                aria-label="WhatsApp"
-              >
+            <a
+              href="https://wa.me/919767747360"
+              target="_blank"
+              rel="noreferrer"
+              className="social-btns"
+              aria-label="WhatsApp"
+            >
               <i className="bx bxl-whatsapp"></i>
-              </a>
-</div>
+            </a>
+          </div>
 
-
-          <a href="/Vrushabh_Digraje_Computer.pdf"  target="_blank" rel="noopener noreferrer"  className="btn-box">Get Resume</a>
+          <a href="/Vrushabh_Digraje_Computer.pdf" target="_blank" rel="noopener noreferrer" className="btn-box">
+            Get Resume
+          </a>
         </div>
 
         <div className="home-img">
-          <img src={profile} alt="profile" className="profile-pic" />
+          <Tilt max={15} scale={1.03} speed={500}>
+            <img src={profile} alt="profile" className="profile-pic" />
+          </Tilt>
         </div>
       </div>
     </section>

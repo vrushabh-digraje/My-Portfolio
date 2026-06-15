@@ -507,3 +507,41 @@ img {
         margin-bottom: 4rem;
     }
 }
+
+/* Mobile Menu Drawer (Implemented via Antigravity) */
+@media (max-width: 767px) {
+  .hamburger-btn {
+    display: block !important;
+  }
+  .navbar ul {
+    display: flex !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    width: 260px !important;
+    height: 100vh !important;
+    background: rgba(5, 5, 5, 0.95) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-left: 1px solid var(--border-color) !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 3.5rem !important;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    padding: 5rem 0 !important;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5) !important;
+  }
+  .navbar ul.open {
+    right: 0 !important;
+  }
+  
+  /* Responsive Journey Columns Stacking */
+  .journey-grid {
+    grid-template-columns: 1fr !important;
+    gap: 4.5rem !important;
+  }
+  .journey-col-title {
+    margin-bottom: 2.5rem !important;
+  }
+}
