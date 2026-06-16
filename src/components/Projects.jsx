@@ -7,6 +7,7 @@ import carrental from "../assets/images/project-carrental.png";
 import pearldent from "../assets/images/project-pearldent.png";
 import swiftmove from "../assets/images/project-swiftmove.png";
 import hirepilot from "../assets/images/project-hirepilot.png";
+import aetheria from "../assets/images/project-aetheria.png";
 import ProjectModal from "./ProjectModal";
 import Reveal from "./Reveal";
 import Tilt from "./Tilt";
@@ -91,6 +92,22 @@ const PROJECTS_DATA = [
     live: "https://hirepilot.netlify.app",
     code: "https://github.com/vrushabh-digraje/HirePilot",
     category: "Full Stack",
+  },
+  {
+    img: aetheria,
+    title: "Aetheria - Creative Digital Agency",
+    desc: "A premium multidisciplinary digital agency website featuring high-end GSAP scroll animations, smooth Lenis scrolling, Barba.js page transitions, and interactive design layouts.",
+    longDesc: "Aetheria is an immersive, website showcasing digital advertising and creative services (Google Ads, Meta Ads, SEO, UI/UX). It implements cutting-edge frontend techniques, including GSAP ScrollTrigger timeline animations, Barba.js for fluid single-page transitions, Lenis for smooth momentum scrolling, and custom canvas noise overlays for premium grain styling.",
+    highlights: [
+      "Smooth momentum scrolling powered by Lenis and custom page transitions via Barba.js.",
+      "Immersive scroll-linked animations and UI/UX animations using GSAP and ScrollTrigger.",
+      "Custom grained beige styling and dark modes structured with modular CSS variables.",
+      "Highly responsive layouts and custom HTMX data fetching integrations."
+    ],
+    tags: ["React", "GSAP", "Lenis Scroll", "Barba.js", "JavaScript", "CSS3"],
+    live: "https://aetheria.netlify.app",
+    code: "https://github.com/vrushabh-digraje/Aetheria",
+    category: "React",
   },
   {
     img: bitcoin,
