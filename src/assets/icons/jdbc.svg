@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 256 256">
+  <g fill="none">
+    <rect width="256" height="256" fill="#F4F4ED" rx="60"/>
+    <!-- Database cylinders -->
+    <path d="M78 80c0-10 22-18 50-18s50 8 50 18-22 18-50 18-50-8-50-18z" fill="#34495E"/>
+    <path d="M78 80v36c0 10 22 18 50 18s50-8 50-18V80" fill="#2C3E50"/>
+    <path d="M78 80c0 10 22 18 50 18s50-8 50-18" stroke="#1A252F" stroke-width="4"/>
+    
+    <path d="M78 126v36c0 10 22 18 50 18s50-8 50-18v-36" fill="#2C3E50"/>
+    <path d="M78 126c0 10 22 18 50 18s50-8 50-18" stroke="#1A252F" stroke-width="4"/>
+    
+    <!-- Java connection plug/connector -->
+    <path d="M128 180v32" stroke="#f89820" stroke-width="10" stroke-linecap="round"/>
+    <path d="M108 212h40" stroke="#f89820" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

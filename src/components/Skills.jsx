@@ -12,6 +12,11 @@ import angular from "../assets/icons/angular.png";
 import react from "../assets/icons/react.png";
 import bootstrap from "../assets/icons/bootstrap.png";
 import redux from "../assets/icons/redux.png";
+import servlet from "../assets/icons/servlet.svg";
+import jdbc from "../assets/icons/jdbc.svg";
+import hibernate from "../assets/icons/hibernate-light.svg";
+import spring from "../assets/icons/spring.svg";
+import mysql from "../assets/icons/mysql-light.svg";
 
 const SKILLS_DATA = [
   { img: react, name: "React", category: "Frontend", percent: "90%", color: "#61dafb" },
@@ -22,6 +27,12 @@ const SKILLS_DATA = [
   { img: css, name: "CSS", category: "Frontend", percent: "90%", color: "#1572b6" },
   { img: angular, name: "Angular", category: "Frontend", percent: "75%", color: "#dd0031" },
   { img: java, name: "Java", category: "Languages", percent: "75%", color: "#f89820" },
+  { img: servlet, name: "Servlet", category: "Backend", percent: "80%", color: "#f89820" },
+  { img: jdbc, name: "JDBC", category: "Backend", percent: "80%", color: "#e67e22" },
+  { img: hibernate, name: "Hibernate", category: "Backend", percent: "85%", color: "#bcae79" },
+  { img: spring, name: "Spring Boot", category: "Backend", percent: "85%", color: "#6db33f" },
+  { img: spring, name: "Spring MVC", category: "Backend", percent: "80%", color: "#6db33f" },
+  { img: mysql, name: "MySQL", category: "Backend", percent: "85%", color: "#00678c" },
   { img: git, name: "Git", category: "Tools", percent: "85%", color: "#f05032" },
   { img: github, name: "GitHub", category: "Tools", percent: "90%", color: "#ffffff" }
 ];
@@ -46,7 +57,7 @@ function Skills() {
         {/* Skill Category Filters */}
         <Reveal delay={0.1}>
           <div className="skills-filter">
-            {["All", "Frontend", "Languages", "Tools"].map((cat) => (
+            {["All", "Frontend", "Backend", "Languages", "Tools"].map((cat) => (
               <button
                 key={cat}
                 className={`skills-filter-btn ${filter === cat ? "active" : ""}`}

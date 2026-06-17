@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 256 256">
+  <g fill="none">
+    <rect width="256" height="256" fill="#F4F4ED" rx="60"/>
+    <!-- Elegant Server Rack with Java Accent -->
+    <rect x="58" y="58" width="140" height="38" rx="8" fill="#2C3E50" stroke="#34495E" stroke-width="4"/>
+    <rect x="58" y="110" width="140" height="38" rx="8" fill="#2C3E50" stroke="#34495E" stroke-width="4"/>
+    <rect x="58" y="162" width="140" height="38" rx="8" fill="#2C3E50" stroke="#34495E" stroke-width="4"/>
+    
+    <!-- Lights/Dials -->
+    <circle cx="80" cy="77" r="6" fill="#2ECC71"/>
+    <circle cx="98" cy="77" r="6" fill="#f89820"/>
+    <circle cx="80" cy="129" r="6" fill="#2ECC71"/>
+    <circle cx="98" cy="129" r="6" fill="#f89820"/>
+    <circle cx="80" cy="181" r="6" fill="#2ECC71"/>
+    <circle cx="98" cy="181" r="6" fill="#f89820"/>
+    
+    <!-- Connection lines representing Java servlet mapping -->
+    <path d="M130 77 h48 M130 129 h48 M130 181 h48" stroke="#BDC3C7" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>
