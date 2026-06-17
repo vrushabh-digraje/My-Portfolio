@@ -12,7 +12,7 @@ import ProjectModal from "./ProjectModal";
 import Reveal from "./Reveal";
 import Tilt from "./Tilt";
 
-const PROJECTS_DATA = [
+export const PROJECTS_DATA = [
   {
     img: carrental,
     title: "EliteCars - Premium Car Rental",

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Reveal from "./Reveal";
+import { PROJECTS_DATA } from "./Projects";
 
 function About() {
   const [activeTab, setActiveTab] = useState("about");
@@ -71,7 +72,7 @@ function About() {
             {/* Stats Counter Section */}
             <div className="about-stats">
               <div className="stat-box">
-                <span className="stat-num">4+</span>
+                <span className="stat-num">{PROJECTS_DATA.length}+</span>
                 <span className="stat-label">Projects Built</span>
               </div>
               <div className="stat-box">
