@@ -36,7 +36,7 @@ function About() {
             <div className="tab-content">
               {activeTab === "about" && (
                 <p className="about-desc">
-                  I’m Vrushabh Digraje, a frontend developer passionate about building responsive, 
+                  I’m Vrushabh Digraje, a Full Stack Developer passionate about building responsive, 
                   user-friendly web interfaces. I enjoy turning ideas into interactive experiences 
                   using clean, efficient code and modern frontend technologies.
                   <br /><br />

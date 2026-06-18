@@ -58,7 +58,7 @@ function Home() {
           </h3>
 
           <p>
-            A Frontend Developer passionate about building responsive,
+            A Full Stack Developer passionate about building responsive,
             user-friendly interfaces. I focus on clean design, smooth user
             experiences, and turning ideas into interactive, real-world
             solutions.
