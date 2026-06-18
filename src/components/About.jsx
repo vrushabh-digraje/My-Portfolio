@@ -14,7 +14,7 @@ function About() {
               About <span className="text">Me</span>
             </h1>
 
-            <h4 className="about-role">Frontend Developer</h4>
+            <h4 className="about-role">Full Stack Developer</h4>
 
             {/* Interactive Tabs */}
             <div className="about-tabs">

@@ -545,3 +545,122 @@ img {
     margin-bottom: 2.5rem !important;
   }
 }
+
+/* ==========================================================================
+   ABOUT & CONTACT SECTIONS RESPONSIVENESS OVERRIDES
+   ========================================================================== */
+
+/* Overrides for tablets and laptops (>= 768px) */
+@media (min-width: 768px) {
+  .contact-text,
+  .contact-form {
+    width: 100% !important; /* Let Reveal wrappers determine the column width */
+  }
+  
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.8rem !important;
+  }
+}
+
+/* Overrides for mobile screens (< 768px) */
+@media (max-width: 767px) {
+  /* Contact section layout stacking */
+  .container.contact {
+    flex-direction: column !important;
+    gap: 3rem !important;
+    padding: 2rem 1.5rem !important;
+  }
+  
+  /* Force Reveal wrapper divs inside contact container to be full width */
+  .container.contact > div {
+    width: 100% !important;
+  }
+  
+  .contact-text,
+  .contact-form {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .contact-text {
+    text-align: center !important;
+  }
+  
+  .contact-text p,
+  .contact-text h4 {
+    text-align: center !important;
+  }
+  
+  .contact-list li {
+    justify-content: center !important;
+  }
+  
+  .social-icons {
+    justify-content: center !important;
+  }
+
+  /* About section responsive details */
+  .about-card {
+    padding: 3rem 2rem !important;
+    border-radius: 2rem !important;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    margin-top: 3rem !important;
+    padding-top: 2.5rem !important;
+  }
+
+  .stat-box {
+    padding: 1.8rem 1rem !important;
+    border-radius: 1.4rem !important;
+  }
+
+  .stat-num {
+    font-size: 2.6rem !important;
+  }
+
+  .stat-label {
+    font-size: 1.2rem !important;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* Overrides for small phones (< 480px) */
+@media (max-width: 480px) {
+  .about-card {
+    padding: 2.2rem 1.2rem !important;
+    border-radius: 1.5rem !important;
+  }
+
+  .about-stats {
+    gap: 1rem !important;
+    margin-top: 2.5rem !important;
+    padding-top: 2rem !important;
+  }
+
+  .stat-box {
+    padding: 1.4rem 0.8rem !important;
+    border-radius: 1.2rem !important;
+  }
+
+  .stat-num {
+    font-size: 2.2rem !important;
+  }
+
+  .stat-label {
+    font-size: 1rem !important;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem !important;
+  }
+}
+
