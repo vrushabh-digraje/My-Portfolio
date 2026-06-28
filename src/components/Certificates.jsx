@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaLaptopCode, FaCode, FaServer, FaAngular, FaTimes, FaExternalLinkAlt } from "react-icons/fa";
+import { FaLaptopCode, FaCode, FaServer, FaAngular, FaTimes, FaExternalLinkAlt, FaJava } from "react-icons/fa";
 import Reveal from "./Reveal";
 
 function Certificates() {
@@ -7,6 +7,11 @@ function Certificates() {
   const [previewTitle, setPreviewTitle] = useState("");
 
   const certificates = [
+    {
+      icon: <FaJava />,
+      title: "Java Full Stack Development with AI",
+      link: "/Java_Full_Stack_Development_with_AI.pdf",
+    },
     {
       icon: <FaServer />,
       title: "Full Stack Web Development",
