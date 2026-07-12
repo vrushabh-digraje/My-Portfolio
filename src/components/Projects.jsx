@@ -95,17 +95,17 @@ export const PROJECTS_DATA = [
   },
   {
     img: aetheria,
-    title: "Aetheria - Creative Digital Agency",
-    desc: "A premium multidisciplinary digital agency website featuring high-end GSAP scroll animations, smooth Lenis scrolling, Barba.js page transitions, and interactive design layouts.",
-    longDesc: "Aetheria is an immersive, website showcasing digital advertising and creative services (Google Ads, Meta Ads, SEO, UI/UX). It implements cutting-edge frontend techniques, including GSAP ScrollTrigger timeline animations, Barba.js for fluid single-page transitions, Lenis for smooth momentum scrolling, and custom canvas noise overlays for premium grain styling.",
+    title: "Aetheria - Luxury Hotels & Resorts",
+    desc: "A luxury hotels and resorts booking portal featuring resort destination cataloging, room selection, interactive booking calendars, and customer bookings dashboard.",
+    longDesc: "Aetheria is an immersive, high-end booking application for luxury hotels and resorts worldwide (Maldives, Paris, Kyoto). Built with React Router and state-based booking contexts, it provides an exquisite interface for filtering destinations, choosing luxury room packages (e.g. Overwater Sunrise Villas, Eiffel View Suites), managing calendar check-in/check-out dates, calculating dynamic checkouts, and displaying persistent reservation summaries.",
     highlights: [
-      "Smooth momentum scrolling powered by Lenis and custom page transitions via Barba.js.",
-      "Immersive scroll-linked animations and UI/UX animations using GSAP and ScrollTrigger.",
-      "Custom grained beige styling and dark modes structured with modular CSS variables.",
-      "Highly responsive layouts and custom HTMX data fetching integrations."
+      "Interactive booking flow with real-time room availability, calendar picking, and guest filters.",
+      "Sophisticated card grid displaying hotel amenities, reviews, ratings, and image sliders.",
+      "Robust React state management (BookingContext) linking searches to checkout forms and booking registries.",
+      "Elegant typography and fluid card animations styled with premium responsive design systems."
     ],
-    tags: ["React", "GSAP", "Lenis Scroll", "Barba.js", "JavaScript", "CSS3"],
-    live: "https://aetheria.netlify.app",
+    tags: ["React", "React Router", "Context API", "JavaScript", "HTML5", "CSS3"],
+    live: "https://astounding-semifreddo-e918a5.netlify.app/",
     code: "https://github.com/vrushabh-digraje/Aetheria",
     category: "React",
   },
