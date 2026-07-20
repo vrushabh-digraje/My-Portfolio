@@ -8,11 +8,45 @@ import pearldent from "../assets/images/project-pearldent.png";
 import swiftmove from "../assets/images/project-swiftmove.png";
 import hirepilot from "../assets/images/project-hirepilot.png";
 import aetheria from "../assets/images/project-aetheria.png";
+import hotel from "../assets/images/project-hotel.png";
+import nextlearn from "../assets/images/project-nextlearn.png";
 import ProjectModal from "./ProjectModal";
 import Reveal from "./Reveal";
 import Tilt from "./Tilt";
 
 export const PROJECTS_DATA = [
+  {
+    img: hotel,
+    title: "Hotel Room Booking Platform",
+    desc: "A full-stack hotel reservation application built with React and Node.js/Express, featuring real-time room availability, interactive booking calendars, and online reservation management.",
+    longDesc: "A comprehensive hotel room booking platform enabling users to search available luxury rooms, filter by preferences and amenities, manage check-in/check-out dates, and reserve stays seamlessly. Powered by a dynamic React frontend connected to a robust Node.js and Express REST API.",
+    highlights: [
+      "Full-stack reservation portal with dynamic room catalog and category filters.",
+      "Interactive room availability calendar with automated total stay pricing calculation.",
+      "RESTful API backend for managing user accounts, room inventory, and reservation bookings.",
+      "Modern dark-mode design with responsive card layouts and interactive modals."
+    ],
+    tags: ["React", "Node.js", "Express", "MongoDB", "CSS3"],
+    live: "https://hotel-room-booking-frontend-9k59.onrender.com",
+    code: "https://github.com/vrushabh-digraje/Hotel-room-booking",
+    category: "Full Stack",
+  },
+  {
+    img: nextlearn,
+    title: "NextLearn - E-Learning Platform",
+    desc: "An intuitive web application for online learning featuring course browsing, video lesson streaming, student progress tracking, and interactive learning modules.",
+    longDesc: "NextLearn is an interactive e-learning platform built to empower students and instructors. Features course catalogs across various domains, video lesson playback, course enrollment management, student progress tracking meters, and downloadable study resources.",
+    highlights: [
+      "Interactive course management dashboard with student enrollment and progress metrics.",
+      "Categorized course catalog with course details, instructor info, and curriculum outline.",
+      "Responsive video streaming layout integrated with module checklists.",
+      "Secure backend architecture for authentication, course metadata, and student data."
+    ],
+    tags: ["React", "Node.js", "Express", "MongoDB", "CSS3"],
+    live: "https://nextlearn-frontend.onrender.com",
+    code: "https://github.com/vrushabh-digraje/NextLearn",
+    category: "Full Stack",
+  },
   {
     img: carrental,
     title: "EliteCars - Premium Car Rental",
