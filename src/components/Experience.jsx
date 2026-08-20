@@ -4,6 +4,30 @@ import Reveal from "./Reveal";
 function Experience() {
   const experiences = [
     {
+      role: "Full Stack Developer Intern",
+      company: "AiDamsole Agile Services Pvt. Ltd",
+      duration: "Jul 2026 – Present",
+      location: "Pune, India",
+      details: [
+        "Collaborating within an Agile team to develop and scale functional web application modules using React.js, Next.js, Node.js, Express.js, and MongoDB.",
+        "Integrating secure and robust RESTful APIs to facilitate seamless data communication between the frontend and backend layers.",
+        "Adhering to secure coding and data-handling practices while actively resolving complex implementation issues."
+      ],
+      skills: ["React.js", "Next.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Agile"]
+    },
+    {
+      role: "Java FullStack Intern",
+      company: "Envision Computer Training Institute, Pune",
+      duration: "Jan 2026 – Jun 2026",
+      location: "Pune, India",
+      details: [
+        "Trained in full-stack Java development, specializing in Core Java, Servlets, JDBC, Hibernate, and Spring Boot through hands-on project development.",
+        "Designed and implemented REST APIs, integrating them with frontend interfaces to deliver cohesive end-to-end features.",
+        "Architected relational database schemas using MySQL while applying core OOP and MVC design principles to real-world coding challenges."
+      ],
+      skills: ["Core Java", "Spring Boot", "Hibernate", "MySQL", "REST APIs", "MVC"]
+    },
+    {
       role: "MERN Stack Intern",
       company: "EY Global Delivery Services (EY GDS)",
       duration: "Feb 2025 – Mar 2025",
