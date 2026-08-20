@@ -52,7 +52,7 @@ function Experience() {
         </Reveal>
 
         <div className="experience-container" style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <div className="timeline-wrap" style={{ borderLeft: "2px solid var(--border-color)" }}>
+          <div className="timeline-wrap timeline-alternate">
             {experiences.map((exp, index) => (
               <Reveal key={index} delay={index * 0.1}>
                 <div className="timeline-card">

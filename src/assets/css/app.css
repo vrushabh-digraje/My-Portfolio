@@ -1586,3 +1586,57 @@ body {
   margin-top: 0.5rem;
 }
 
+/* Alternating Timeline for Experience Section */
+@media (min-width: 768px) {
+  .timeline-wrap.timeline-alternate {
+    border-left: none !important;
+    padding-left: 0 !important;
+    align-items: center;
+  }
+
+  .timeline-wrap.timeline-alternate::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--border-color);
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .timeline-wrap.timeline-alternate > div {
+    width: 50% !important;
+    display: flex !important;
+    box-sizing: border-box;
+  }
+
+  .timeline-wrap.timeline-alternate > div:nth-child(odd) {
+    justify-content: flex-end;
+    align-self: flex-start;
+    padding-right: 3.5rem;
+    padding-left: 0;
+  }
+
+  .timeline-wrap.timeline-alternate > div:nth-child(even) {
+    justify-content: flex-start;
+    align-self: flex-end;
+    padding-left: 3.5rem;
+    padding-right: 0;
+  }
+
+  .timeline-wrap.timeline-alternate > div:nth-child(odd) .timeline-card::before {
+    left: auto;
+    right: -4.4rem;
+    top: 3.2rem;
+  }
+
+  .timeline-wrap.timeline-alternate > div:nth-child(even) .timeline-card::before {
+    left: -4.4rem;
+    right: auto;
+    top: 3.2rem;
+  }
+}
+
+
