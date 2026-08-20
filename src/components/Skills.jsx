@@ -17,9 +17,11 @@ import jdbc from "../assets/icons/jdbc.svg";
 import hibernate from "../assets/icons/hibernate-light.svg";
 import spring from "../assets/icons/spring.svg";
 import mysql from "../assets/icons/mysql-light.svg";
+import nextjs from "../assets/icons/nextjs.svg";
 
 const SKILLS_DATA = [
   { img: react, name: "React", category: "Frontend", percent: "90%", color: "#61dafb" },
+  { img: nextjs, name: "Next.js", category: "Frontend", percent: "80%", color: "#ffffff" },
   { img: js, name: "JavaScript", category: "Frontend", percent: "85%", color: "#f7df1e" },
   { img: bootstrap, name: "Bootstrap", category: "Frontend", percent: "90%", color: "#7952b3" },
   { img: redux, name: "Redux", category: "Frontend", percent: "80%", color: "#764abc" },
