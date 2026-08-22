@@ -3,20 +3,20 @@
    ========================================================================== */
 :root {
   --navbar-height: 7rem;
-  --bg-dark: #080b11;
-  --bg-darker: #030508;
-  --bg-card: rgba(20, 26, 38, 0.45);
-  --bg-card-hover: rgba(20, 26, 38, 0.7);
-  --accent-color: #38bdf8;
-  --accent-color-secondary: #6366f1;
-  --accent-glow: rgba(56, 189, 248, 0.35);
-  --accent-glow-secondary: rgba(99, 102, 241, 0.25);
-  --accent-glow-subtle: rgba(56, 189, 248, 0.08);
+  --bg-dark: #121214;
+  --bg-darker: #0a0a0c;
+  --bg-card: rgba(26, 26, 30, 0.65);
+  --bg-card-hover: rgba(36, 36, 42, 0.85);
+  --accent-color: #b98c7b;
+  --accent-color-secondary: #e0edf9;
+  --accent-glow: rgba(185, 140, 123, 0.35);
+  --accent-glow-secondary: rgba(224, 237, 249, 0.25);
+  --accent-glow-subtle: rgba(185, 140, 123, 0.08);
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
-  --text-muted: #64748b;
-  --border-color: rgba(56, 189, 248, 0.08);
-  --border-glow: rgba(56, 189, 248, 0.2);
+  --text-muted: #8e8e93;
+  --border-color: rgba(185, 140, 123, 0.12);
+  --border-glow: rgba(185, 140, 123, 0.25);
   
   scroll-behavior: smooth;
 }
@@ -1638,5 +1638,156 @@ body {
     top: 3.2rem;
   }
 }
+
+/* Bento Grid Layout styles */
+.bento-grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+  max-width: 1300px;
+  width: 92%;
+  margin: 10rem auto 5rem;
+}
+
+/* Individual Bento Cards */
+.bento-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 2.4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease;
+  overflow: hidden;
+  padding: 3.5rem;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-glow);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35), 0 0 25px var(--accent-glow-subtle);
+}
+
+/* Layout spans on desktop (width >= 1024px) */
+@media (min-width: 1024px) {
+  .bento-hero {
+    grid-column: span 8;
+  }
+  .bento-about {
+    grid-column: span 4;
+  }
+  .bento-skills {
+    grid-column: span 6;
+  }
+  .bento-experience {
+    grid-column: span 6;
+  }
+  .bento-projects {
+    grid-column: span 12;
+  }
+  .bento-certificates {
+    grid-column: span 6;
+  }
+  .bento-contact {
+    grid-column: span 6;
+  }
+}
+
+/* Tablet Layout (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .bento-hero {
+    grid-column: span 12;
+  }
+  .bento-about {
+    grid-column: span 12;
+  }
+  .bento-skills {
+    grid-column: span 12;
+  }
+  .bento-experience {
+    grid-column: span 12;
+  }
+  .bento-projects {
+    grid-column: span 12;
+  }
+  .bento-certificates {
+    grid-column: span 12;
+  }
+  .bento-contact {
+    grid-column: span 12;
+  }
+}
+
+/* Mobile Layout (width < 768px) */
+@media (max-width: 767px) {
+  .bento-grid-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 8rem;
+  }
+  .bento-hero,
+  .bento-about,
+  .bento-skills,
+  .bento-experience,
+  .bento-projects,
+  .bento-certificates,
+  .bento-contact {
+    grid-column: span 1;
+  }
+  .bento-card {
+    padding: 2.2rem 1.8rem;
+  }
+}
+
+/* Bento Mode overrides for components */
+.bento-mode .section {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.bento-mode .section > .container {
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+.bento-mode .home {
+  height: auto !important;
+  padding: 0 !important;
+}
+
+.bento-mode .about-card,
+.bento-mode .skills,
+.bento-mode .experience,
+.bento-mode .projects,
+.bento-mode .certificates,
+.bento-mode .contact {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.bento-mode .about-card {
+  padding: 0 !important;
+}
+.bento-mode .contact-form {
+  max-width: 100% !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  backdrop-filter: none !important;
+}
+
 
 

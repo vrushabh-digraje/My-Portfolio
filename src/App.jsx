@@ -53,14 +53,30 @@ function App() {
 
       {/* Main Sections */}
       <Navbar />
-      <main>
-        <Home />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Certificates />
-        <Contact />
+      <main className="bento-mode">
+        <div className="bento-grid-container">
+          <div className="bento-card bento-hero" id="home">
+            <Home />
+          </div>
+          <div className="bento-card bento-about" id="about">
+            <About />
+          </div>
+          <div className="bento-card bento-skills" id="skills">
+            <Skills />
+          </div>
+          <div className="bento-card bento-experience" id="experience">
+            <Experience />
+          </div>
+          <div className="bento-card bento-projects" id="projects">
+            <Projects />
+          </div>
+          <div className="bento-card bento-certificates" id="certificates">
+            <Certificates />
+          </div>
+          <div className="bento-card bento-contact" id="contact">
+            <Contact />
+          </div>
+        </div>
       </main>
       <Footer />
 
