@@ -52,33 +52,33 @@ function App() {
       <MouseSpotlight />
 
       {/* Main Sections */}
-      <Navbar />
-      <main className="floating-mode">
-        <div className="floating-panels-container">
-          <div className="panel-card panel-hero" id="home">
+      <div className="portfolio-sidebar-layout">
+        <Navbar />
+        <main className="portfolio-main-content timeline-mode">
+          <div className="timeline-node" id="home">
             <Home />
           </div>
-          <div className="panel-card panel-about" id="about">
+          <div className="timeline-node" id="about">
             <About />
           </div>
-          <div className="panel-card panel-skills" id="skills">
+          <div className="timeline-node" id="skills">
             <Skills />
           </div>
-          <div className="panel-card panel-experience" id="experience">
+          <div className="timeline-node" id="experience">
             <Experience />
           </div>
-          <div className="panel-card panel-projects" id="projects">
+          <div className="timeline-node" id="projects">
             <Projects />
           </div>
-          <div className="panel-card panel-certificates" id="certificates">
+          <div className="timeline-node" id="certificates">
             <Certificates />
           </div>
-          <div className="panel-card panel-contact" id="contact">
+          <div className="timeline-node" id="contact">
             <Contact />
           </div>
-        </div>
-      </main>
-      <Footer />
+          <Footer />
+        </main>
+      </div>
 
       {/* Scroll to Top progress widget */}
       <div 

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import profilePic from "../assets/images/profile-pic.JPG";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
@@ -18,16 +19,15 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // 1. Shrunk Navbar state
       if (window.scrollY > 50) {
         setIsShrunk(true);
       } else {
         setIsShrunk(false);
       }
 
-      // 2. Scrollspy active section
+      // Scrollspy active section
       const sections = navLinks.map(link => document.getElementById(link.id));
-      const scrollPosition = window.scrollY + 120; // offset for navbar height + threshold
+      const scrollPosition = window.scrollY + 180; // adjusted threshold for timeline offsets
 
       for (let i = 0; i < sections.length; i++) {
         const sectionEl = sections[i];
@@ -43,21 +43,27 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    // Initial check
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav className={`navbar ${isShrunk ? "shrunk" : ""}`}>
-      <a href="#home" className="logo">Vrushabh Digraje</a>
+      {/* Sidebar Profile Widget (Hidden on mobile) */}
+      <div className="sidebar-profile">
+        <img src={profilePic} alt="Vrushabh Digraje" />
+        <h3>Vrushabh Digraje</h3>
+        <p>Full Stack Developer</p>
+      </div>
+
+      <a href="#home" className="logo logo-mobile">Vrushabh Digraje</a>
       
       {/* Mobile Hamburger Trigger */}
       <button 
         className="hamburger-btn"
         onClick={() => setMenuOpen(!menuOpen)}
         style={{
-          display: "none", // Will be toggled in media-queries/css
+          display: "none", 
           background: "none",
           border: "none",
           color: "#fff",
@@ -85,6 +91,21 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
+
+      {/* Sidebar Footer Widget (Hidden on mobile) */}
+      <div className="navbar-footer">
+        <div className="social-icons">
+          <a href="https://github.com" target="_blank" rel="noreferrer" className="social-btns">
+            <FaGithub />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-btns">
+            <FaLinkedin />
+          </a>
+          <a href="mailto:contact@example.com" className="social-btns">
+            <FaEnvelope />
+          </a>
+        </div>
+      </div>
     </nav>
   );
 }
