@@ -1948,7 +1948,7 @@ body {
   }
 }
 
-/* Main Timeline Content area on desktop */
+/* Main Content area on desktop */
 .portfolio-main-content {
   flex-grow: 1;
   position: relative;
@@ -1959,159 +1959,195 @@ body {
 @media (min-width: 1024px) {
   .portfolio-main-content {
     margin-left: 320px;
-    padding: 8rem 8rem 8rem 10rem;
+    padding: 6rem 6rem;
     max-width: calc(100% - 320px);
-  }
-
-  /* Center path glowing line of the timeline */
-  .portfolio-main-content::before {
-    content: "";
-    position: absolute;
-    left: 8rem;
-    top: 10rem;
-    bottom: 15rem;
-    width: 3px;
-    background: linear-gradient(
-      to bottom, 
-      var(--accent-color) 0%, 
-      var(--accent-color-secondary) 60%, 
-      rgba(204, 164, 59, 0.05) 100%
-    );
-    box-shadow: 0 0 15px var(--accent-glow);
-    z-index: 1;
-  }
-
-  /* Timeline Node spacing and dot */
-  .timeline-node {
-    position: relative;
-    margin-left: 8rem;
-    padding-left: 6rem;
-    margin-bottom: 12rem;
-    z-index: 2;
-  }
-
-  .timeline-node:last-of-type {
-    margin-bottom: 0;
-  }
-
-  .timeline-node::before {
-    content: "";
-    position: absolute;
-    left: -9.1rem; /* Align center of the dot on the line */
-    top: 5rem;
-    width: 2.2rem;
-    height: 2.2rem;
-    border-radius: 50%;
-    background-color: var(--bg-darker);
-    border: 4px solid var(--accent-color);
-    box-shadow: 0 0 15px var(--accent-color);
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    z-index: 3;
-  }
-
-  .timeline-node:hover::before {
-    background-color: var(--accent-color);
-    transform: scale(1.25);
-    box-shadow: 0 0 25px var(--accent-color), 0 0 10px #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
   }
 }
 
-/* Tablet & Mobile Layout overrides */
 @media (max-width: 1023px) {
-  .portfolio-sidebar-layout {
-    display: block;
-  }
-
   .portfolio-main-content {
     padding: 10rem 2rem 4rem;
     margin-left: 0;
-  }
-
-  .portfolio-main-content::before {
-    content: "";
-    position: absolute;
-    left: 3rem;
-    top: 10rem;
-    bottom: 10rem;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--accent-color) 0%, rgba(204, 164, 59, 0.05) 100%);
-    box-shadow: 0 0 10px var(--accent-glow);
-    z-index: 1;
-  }
-
-  .timeline-node {
-    position: relative;
-    margin-left: 3rem;
-    padding-left: 2.5rem;
-    margin-bottom: 8rem;
-    z-index: 2;
-  }
-
-  .timeline-node::before {
-    content: "";
-    position: absolute;
-    left: -4rem;
-    top: 4.5rem;
-    width: 1.8rem;
-    height: 1.8rem;
-    border-radius: 50%;
-    background-color: var(--bg-darker);
-    border: 3.5px solid var(--accent-color);
-    box-shadow: 0 0 10px var(--accent-color);
-    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
   }
 }
 
-/* Timeline Mode styling overrides for embedded components */
-.timeline-mode .section {
+/* Bento Dashboard Row (Grid) */
+.bento-dashboard-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+  width: 100%;
+}
+
+.bento-about-col {
+  grid-column: span 8;
+}
+
+.bento-stats-col {
+  grid-column: span 4;
+}
+
+@media (max-width: 1023px) {
+  .bento-dashboard-row {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .bento-about-col,
+  .bento-stats-col {
+    grid-column: span 1;
+  }
+}
+
+/* Stats Card Styling */
+.stats-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 2.4rem;
+  padding: 4.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+}
+
+.stats-card:hover {
+  border-color: var(--border-glow);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35), 0 0 25px var(--accent-glow-subtle);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.025);
+  border-radius: 1.6rem;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  background: rgba(204, 164, 59, 0.04);
+  border-color: rgba(204, 164, 59, 0.15);
+}
+
+.stat-number {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stats-download-btn {
+  width: 100%;
+  text-align: center;
+  padding: 1.6rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #030304;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px var(--accent-glow);
+  box-sizing: border-box;
+}
+
+.stats-download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--accent-glow), 0 0 10px #fff;
+  background: #fff;
+}
+
+/* Bento Mode styling overrides for components */
+.bento-mode .section {
   padding: 0 !important;
   margin: 0 !important;
   width: 100% !important;
 }
 
-.timeline-mode .section > .container {
+.bento-mode .section > .container {
   padding: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
 }
 
-.timeline-mode .home {
+.bento-mode .home {
   height: auto !important;
   padding: 0 !important;
 }
 
-.timeline-mode .about-card,
-.timeline-mode .skills,
-.timeline-mode .experience,
-.timeline-mode .projects,
-.timeline-mode .certificates,
-.timeline-mode .contact {
-  background: var(--bg-card) !important;
-  border: 1px solid var(--border-color) !important;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border-radius: 2.4rem !important;
-  padding: 4.5rem 4rem !important;
+.bento-mode .bento-section-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 2.4rem;
+  padding: 5rem 4rem;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-sizing: border-box;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+
+.bento-mode .bento-section-card:hover {
+  border-color: var(--border-glow);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35), 0 0 25px var(--accent-glow-subtle);
+}
+
+.bento-mode .about-card,
+.bento-mode .skills,
+.bento-mode .experience,
+.bento-mode .projects,
+.bento-mode .certificates,
+.bento-mode .contact {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  padding: 0 !important;
   margin: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
   box-sizing: border-box !important;
-  transition: all 0.4s ease !important;
 }
 
-.timeline-mode .about-card:hover,
-.timeline-mode .skills:hover,
-.timeline-mode .experience:hover,
-.timeline-mode .projects:hover,
-.timeline-mode .certificates:hover,
-.timeline-mode .contact:hover {
-  border-color: var(--border-glow) !important;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35), 0 0 25px var(--accent-glow-subtle) !important;
+.bento-mode .about-card {
+  padding: 0 !important;
 }
 
-.timeline-mode .contact-form {
+.bento-mode .contact-form {
   max-width: 100% !important;
   background: none !important;
   border: none !important;
@@ -2119,3 +2155,4 @@ body {
   backdrop-filter: none !important;
   box-shadow: none !important;
 }
+
