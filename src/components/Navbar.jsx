@@ -49,14 +49,7 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar ${isShrunk ? "shrunk" : ""}`}>
-      {/* Sidebar Profile Widget (Hidden on mobile) */}
-      <div className="sidebar-profile">
-        <img src={profilePic} alt="Vrushabh Digraje" />
-        <h3>Vrushabh Digraje</h3>
-        <p>Full Stack Developer</p>
-      </div>
-
-      <a href="#home" className="logo logo-mobile">Vrushabh Digraje</a>
+      <a href="#home" className="logo">Vrushabh Digraje</a>
       
       {/* Mobile Hamburger Trigger */}
       <button 
@@ -91,21 +84,6 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-
-      {/* Sidebar Footer Widget (Hidden on mobile) */}
-      <div className="navbar-footer">
-        <div className="social-icons">
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="social-btns">
-            <FaGithub />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-btns">
-            <FaLinkedin />
-          </a>
-          <a href="mailto:contact@example.com" className="social-btns">
-            <FaEnvelope />
-          </a>
-        </div>
-      </div>
     </nav>
   );
 }
