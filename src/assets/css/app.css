@@ -1639,8 +1639,8 @@ body {
   }
 }
 
-/* Bento Grid Layout styles */
-.bento-grid-container {
+/* Floating Panels Layout styles */
+.floating-panels-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 3rem;
@@ -1649,14 +1649,14 @@ body {
   margin: 10rem auto 5rem;
 }
 
-/* Individual Bento Cards */
-.bento-card {
+/* Individual Floating Panel Cards */
+.panel-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 2.4rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
               border-color 0.4s ease, 
               box-shadow 0.4s ease;
@@ -1666,108 +1666,130 @@ body {
   box-sizing: border-box;
 }
 
-.bento-card:hover {
+.panel-card:hover {
   transform: translateY(-5px);
   border-color: var(--border-glow);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35), 0 0 25px var(--accent-glow-subtle);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 30px var(--accent-glow-subtle);
 }
 
-/* Layout spans on desktop (width >= 1024px) */
+/* Staggered overlapping layout on desktop (width >= 1024px) */
 @media (min-width: 1024px) {
-  .bento-hero {
+  .panel-hero {
     grid-column: span 8;
+    z-index: 10;
   }
-  .bento-about {
+  .panel-about {
     grid-column: span 4;
+    z-index: 5;
+    margin-left: -2.5rem;
+    margin-top: 3rem;
   }
-  .bento-skills {
+  .panel-skills {
     grid-column: span 6;
+    z-index: 6;
+    margin-right: -1.5rem;
+    margin-top: -1.5rem;
   }
-  .bento-experience {
+  .panel-experience {
     grid-column: span 6;
+    z-index: 8;
+    margin-left: -1.5rem;
+    margin-top: -3.5rem;
   }
-  .bento-projects {
+  .panel-projects {
     grid-column: span 12;
+    z-index: 7;
+    margin-top: -1.5rem;
   }
-  .bento-certificates {
+  .panel-certificates {
     grid-column: span 6;
+    z-index: 6;
+    margin-right: -1.5rem;
+    margin-top: -1.5rem;
   }
-  .bento-contact {
+  .panel-contact {
     grid-column: span 6;
+    z-index: 9;
+    margin-left: -1.5rem;
+    margin-top: -3rem;
   }
 }
 
-/* Tablet Layout (768px to 1023px) */
+/* Tablet Layout (768px to 1023px) - simple grid with minor overlaps */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .bento-hero {
+  .floating-panels-container {
+    gap: 2.5rem;
+  }
+  .panel-hero {
     grid-column: span 12;
   }
-  .bento-about {
+  .panel-about {
     grid-column: span 12;
   }
-  .bento-skills {
+  .panel-skills {
     grid-column: span 12;
   }
-  .bento-experience {
+  .panel-experience {
     grid-column: span 12;
   }
-  .bento-projects {
+  .panel-projects {
     grid-column: span 12;
   }
-  .bento-certificates {
+  .panel-certificates {
     grid-column: span 12;
   }
-  .bento-contact {
+  .panel-contact {
     grid-column: span 12;
   }
 }
 
-/* Mobile Layout (width < 768px) */
+/* Mobile Layout (width < 768px) - flat clean stack */
 @media (max-width: 767px) {
-  .bento-grid-container {
+  .floating-panels-container {
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: 8rem;
   }
-  .bento-hero,
-  .bento-about,
-  .bento-skills,
-  .bento-experience,
-  .bento-projects,
-  .bento-certificates,
-  .bento-contact {
+  .panel-hero,
+  .panel-about,
+  .panel-skills,
+  .panel-experience,
+  .panel-projects,
+  .panel-certificates,
+  .panel-contact {
     grid-column: span 1;
+    margin: 0 !important;
   }
-  .bento-card {
+  .panel-card {
     padding: 2.2rem 1.8rem;
   }
 }
 
-/* Bento Mode overrides for components */
-.bento-mode .section {
+/* Floating Mode overrides for components */
+.floating-mode .section {
   padding: 0 !important;
   margin: 0 !important;
   width: 100% !important;
 }
 
-.bento-mode .section > .container {
+.floating-mode .section > .container {
   padding: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
 }
 
-.bento-mode .home {
+.floating-mode .home {
   height: auto !important;
   padding: 0 !important;
 }
 
-.bento-mode .about-card,
-.bento-mode .skills,
-.bento-mode .experience,
-.bento-mode .projects,
-.bento-mode .certificates,
-.bento-mode .contact {
+.floating-mode .about-card,
+.floating-mode .skills,
+.floating-mode .experience,
+.floating-mode .projects,
+.floating-mode .certificates,
+.floating-mode .contact {
   background: none !important;
   border: none !important;
   box-shadow: none !important;
@@ -1778,16 +1800,13 @@ body {
   max-width: 100% !important;
 }
 
-.bento-mode .about-card {
+.floating-mode .about-card {
   padding: 0 !important;
 }
-.bento-mode .contact-form {
+.floating-mode .contact-form {
   max-width: 100% !important;
   background: none !important;
   border: none !important;
   padding: 0 !important;
   backdrop-filter: none !important;
 }
-
-
-
