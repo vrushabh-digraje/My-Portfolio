@@ -75,18 +75,13 @@ function App() {
                       <div className="stat-label">Internships</div>
                     </div>
                     <div className="stat-item">
-                      <FaCode style={{ color: "var(--accent-color)", fontSize: "2.4rem", marginBottom: "1rem" }} />
-                      <div className="stat-number">10+</div>
-                      <div className="stat-label">Languages</div>
-                    </div>
-                    <div className="stat-item">
                       <FaTasks style={{ color: "var(--accent-color)", fontSize: "2.4rem", marginBottom: "1rem" }} />
                       <div className="stat-number">15+</div>
                       <div className="stat-label">Projects</div>
                     </div>
-                    <div className="stat-item">
-                      <div className="stat-number" style={{ fontSize: "2.6rem", marginTop: "1rem", color: "var(--accent-color-secondary)" }}>100%</div>
-                      <div className="stat-label" style={{ marginTop: "1rem" }}>Responsive</div>
+                    <div className="stat-item" style={{ gridColumn: "span 2" }}>
+                      <div className="stat-number" style={{ fontSize: "2.6rem", color: "var(--accent-color-secondary)" }}>100%</div>
+                      <div className="stat-label" style={{ marginTop: "0.5rem" }}>Responsive</div>
                     </div>
                   </div>
                 </div>
