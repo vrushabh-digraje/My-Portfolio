@@ -1709,6 +1709,7 @@ body {
   border: 1px solid var(--border-color);
   padding: 1px 8px;
 }
+}
 
 /* Update contact-form styles for input group structure */
 .contact-form form {
