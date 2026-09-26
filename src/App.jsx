@@ -85,8 +85,8 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <a href="#contact" className="stats-download-btn">
-                  <FaDownload /> Get In Touch
+                <a href="/Vrushabh_Digraje_Computer.pdf" target="_blank" rel="noopener noreferrer" className="stats-download-btn">
+                  <FaDownload /> Download Resume
                 </a>
               </div>
             </div>

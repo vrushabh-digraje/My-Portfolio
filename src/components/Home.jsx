@@ -10,9 +10,10 @@ function Home() {
     if (!el) return;
 
     const words = [
-      "Frontend Developer",
-      "React Developer",
-      "Full Stack Developer"
+      "Full Stack Developer",
+      "Java Developer",
+      "MERN Stack Developer",
+      "React Developer"
     ];
     let wordIdx = 0;
     let charIdx = 0;
